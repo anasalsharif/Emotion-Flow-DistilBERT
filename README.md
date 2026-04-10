@@ -23,7 +23,50 @@ Emotion Flow is an intelligent application that classifies the emotional sentime
 ### Running the Project
 The easiest way to start both the backend and frontend is to use the provided run script:
 
+Follow these steps to get everything running locally (recommended from project root):
+
+1. Create and activate a virtual environment (macOS / Linux):
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+2. Install Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Install frontend dependencies:
+
+```bash
+cd frontend && npm install && cd ..
+```
+
+4. Start both backend and frontend (from project root):
+
 ```bash
 chmod +x run_project.sh
 ./run_project.sh
 ```
+
+Quick verification
+
+- Health check (backend):
+
+```bash
+curl http://localhost:8000/
+```
+
+- Run the demo test script (makes a few sample POST requests):
+
+```bash
+python3 test_surprise.py
+```
+
+Notes
+
+- The model weights are downloaded from HuggingFace the first time the backend starts; an internet connection and some disk space are required.
+- If the backend fails to start due to missing packages, re-run `pip install -r requirements.txt` while the virtual environment is active.
+
