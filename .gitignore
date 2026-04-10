@@ -1,0 +1,29 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+.env/
+backend/venv/
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+build/
+dist/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+backend/results/
+backend/emotiflow-finetuned-model/
+
+# Misc
+.DS_Store
+*.log
+.vscode/
+.idea/
+.env*
